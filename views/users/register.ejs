@@ -1,26 +1,65 @@
 <% layout('layouts/boilerplate') %>
-<h1>Register</h1>
-<form action="/register" method="POST" class="validated-form" novalidate>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" required>
-        <div class="invalid-feedback">
-            Please provide a valid email.
+
+<div class="container d-flex justify-content-center align-items-center mb-6">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <img
+            src="/IMG/undraw_into_the_night_vumi.svg"
+            alt=""
+            class="card-img-top"
+          />
+          <h5 class="card-title">Register</h5>
+          <form
+            action="/register"
+            method="POST"
+            class="validated-form"
+            novalidate
+          >
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+                autofocus
+              />
+              <div class="invalid-feedback">Please provide a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                required
+              />
+              <div class="invalid-feedback">Please choose a username.</div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                required
+              />
+              <div class="invalid-feedback">Please choose a password.</div>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
-    <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" class="form-control" id="username" name="username" required>
-        <div class="invalid-feedback">
-            Please choose a username.
-        </div>
-    </div>
-    <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" name="password" required>
-        <div class="invalid-feedback">
-            Please choose a password.
-        </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Register</button>
-</form>
+  </div>
+</div>
+<!-- 
+    
+ -->
