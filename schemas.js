@@ -1,4 +1,4 @@
-const JOI = require("joi");
+const BaseJoi = require("joi");
 const { number } = require("joi");
 const sanitizeHtml = require("sanitize-html");
 
@@ -23,7 +23,7 @@ const extension = (joi) => ({
   },
 });
 
-const Joi = BaseJoi.extend(extension);
+const JOI = BaseJoi.extend(extension);
 
 module.exports.campgroundSchema = JOI.object({
   campground: JOI.object({
